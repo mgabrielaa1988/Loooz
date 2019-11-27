@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Recuperatorio PP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- AGREGAR ARCHIVOS JS AQUI -->
+  <script src="./FRONTEND/Ropa.js"></script>
+  <script src="./FRONTEND/Campera.js"></script>
+  <script src="./FRONTEND/Manejadora.js"></script>
+</head>
+
+<body style="background-color:darkgrey">
+  <div class="container" style="background-color:lightblue">
+    <br>
+    <h4>ABM - Camperas</h4>
+    <br>
+    <div class="row responsive-utilities-test visible-on">
+
+      <table class="table table" style="width:90%">
+        <tr>
+          <td style="width:45%">
+            <table class="table table-hover" style="background-color:cornflowerblue">
+              <tr>
+                <td><label class="col-md-2 control-label">Código</label></td>
+                <td><input type="text" id="txtCodigo" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Nombre</label></td>
+                <td><input type="text" id="txtNombre" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Talle</label></td>
+                <td><input type="text" id="txtTalle" /></td>
+              </tr>
+                <td><label class="col-md-2 control-label">Precio</label></td>
+                <td><input type="text" id="txtPrecio" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Color</label></td>
+                <td><select id="cboColores" style="max-width:180px;min-width:130px" > 
+                    <option>Rojo</option>
+                    <option selected>Azul</option>
+                    <option>Verde</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Foto</label></td>
+                <td><input type="file" id="foto"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input type="button" value="Agregar" id="btn-agregar" class="btn btn-success" onclick="Test.Manejadora.AgregarCampera()" />
+                  <input type="button" value="Mostrar" class="btn btn-info" onclick="Test.Manejadora.MostrarCamperas()" />
+                  <input type="button" value="Filtrar por Color" class="btn btn-default" onclick="" />
+                  <input type="button" value="Cargar Colores" class="btn btn-warning" onclick="" />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <div class="" style="background-color:lavenderblush;">
+              <div id="divTabla">
+                tabla aqu&iacute;...
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    <input type="hidden" id="hdnIdModificacion"><!-- PARA MODIFICAR -->
+    <div id="divSpinner" style="display:none;position:absolute"><img id="imgSpinner" src="BACKEND/gif-load.gif" /></div><!-- PARA EL SPINNER -->
+  </div>
+</body>
+
+</html>
